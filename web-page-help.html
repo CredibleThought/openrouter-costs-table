@@ -79,6 +79,7 @@
   <a href="#search">Search</a>
   <a href="#filters">Feature and version filters</a>
   <a href="#ranks">Usage ranks and categories</a>
+  <a href="#rank-vs-score">&nbsp;&nbsp;Rank vs. Coding score</a>
   <a href="#colours">Colours and band chips</a>
   <a href="#taskcost">Task cost</a>
   <a href="#speeds">Speeds</a>
@@ -183,6 +184,22 @@
   <figcaption><strong>Category</strong> set to Finance: OpenRouter’s most-used finance models, #1 first, in the Usage rank column (moved next to Name by dragging its header).</figcaption>
 </figure>
 <div class="note">A usage rank measures <strong>popularity, not quality</strong>. Cheap, fast models often top the rankings because they handle large volumes. To compare quality, sort by <strong>Coding</strong> or <strong>Intelligence</strong>; for cost, use <strong>Task Cost</strong>.</div>
+
+<h3 id="rank-vs-score">Why the usage rank differs from the Coding score</h3>
+<p>The usage rank and the Coding score measure different things, so they often disagree:</p>
+<ul>
+  <li><strong>Usage rank</strong> counts how many tokens OpenRouter users send to a model: what people <em>use</em>.</li>
+  <li><strong>Coding</strong> and <strong>Intelligence</strong> are Artificial Analysis test scores: how <em>well</em> a model does.</li>
+</ul>
+<p>For example, the Programming ranking is often led by fast, low-cost “Flash” models, while models with the highest Coding scores rank lower or not at all. The reasons:</p>
+<ul>
+  <li><strong>Price drives volume.</strong> Coding agents, autocomplete and batch jobs send very large numbers of tokens. Models that cost 20 to 100 times less collect most of that traffic, even when they score a few points lower.</li>
+  <li><strong>A few large users can dominate.</strong> One busy app can move a model up a ranking on its own.</li>
+  <li><strong>Only OpenRouter traffic counts.</strong> Many people use Claude or GPT directly from Anthropic or OpenAI, or through tools such as Claude Code. That use is not in OpenRouter’s counts, so strong models can rank low there.</li>
+  <li><strong>Not every ranked model has a score.</strong> New models are often ranked before Artificial Analysis tests them, so their Coding column shows a dash.</li>
+  <li><strong>They change at different speeds.</strong> Ranks follow recent traffic; scores change only when a model is tested again.</li>
+</ul>
+<p>Use the usage rank to see what other people rely on at scale. To choose a model, compare <strong>Coding</strong> or <strong>Intelligence</strong> for quality and <strong>Task Cost</strong> for cost. For example, the search <code>coding&gt;70 taskcost&lt;0.01</code> finds strong coders that are also cheap to run.</p>
 
 <h2 id="colours">Colours and band chips</h2>
 <p>Each row is coloured by a band. <strong>Colour by</strong> chooses what the band measures:</p>
