@@ -154,6 +154,7 @@
   <tr><td><code>ttft</code></td><td>TTFT</td><td>time to first token, seconds</td></tr>
   <tr><td><code>tps</code></td><td>tok/s</td><td>throughput, tokens per second</td></tr>
   <tr><td><code>coding</code></td><td>Code</td><td>Artificial Analysis coding index</td></tr>
+  <tr><td><code>lbcode</code></td><td>LB Code</td><td>LiveBench coding score (0–100)</td></tr>
   <tr><td><code>intel</code></td><td>Intel</td><td>Artificial Analysis intelligence index</td></tr>
   <tr><td><code>agentic</code></td><td>—</td><td>Artificial Analysis agentic index</td></tr>
   <tr><td><code>zdr</code></td><td>🔒</td><td>number of zero-data-retention hosts (0 = none)</td></tr>
@@ -171,7 +172,7 @@
 <ul>
   <li><strong>Feature</strong> keeps models that accept or produce a kind of input or output, or, with <strong>ranked models</strong>, only the models in OpenRouter’s usage rankings (see <a href="#ranks">Usage ranks</a>). The other choices are text, file (documents and PDFs), image (in) for vision and OCR, image (out) for generation, audio (in) for transcription, audio (out) for speech and music, video (in) or (out), or embeddings.</li>
   <li><strong>Versions</strong> hides older releases: <em>Newest per family</em> or <em>Newest 2 per family</em>. A family is the model name without its version number, so “Claude Sonnet 5” and “Claude Sonnet 5.5” are one family. Models without a version number are always shown.</li>
-  <li><strong>Release date</strong> keeps models released in the last 12 or 24 months.</li>
+  <li><strong>Release date</strong> keeps models released in the last 24 months, 12 months, month (30 days) or week — handy for spotting new models.</li>
   <li><strong>Hide retiring</strong> hides models OpenRouter has scheduled for retirement.</li>
 </ul>
 <p>When filters hide rows, the count reads, for example, “Showing 120 of 664 ⓘ”. Hover it to see how many rows each filter hides, or click it to clear the search and filters and show every model again.</p>
@@ -193,7 +194,7 @@
 <p>The usage rank and the Coding score measure different things, so they often disagree:</p>
 <ul>
   <li><strong>Usage rank</strong> counts how many tokens OpenRouter users send to a model: what people <em>use</em>.</li>
-  <li>The <strong>Code</strong> and <strong>Intel</strong> columns are Artificial Analysis test scores: how <em>well</em> a model does.</li>
+  <li>The <strong>Code</strong> and <strong>Intel</strong> columns are Artificial Analysis test scores: how <em>well</em> a model does. <strong>LB Code</strong> is LiveBench’s coding score, which often covers new models first.</li>
 </ul>
 <p>For example, the Programming ranking is often led by fast, low-cost “Flash” models, while models with the highest Coding scores rank lower or not at all. The reasons:</p>
 <ul>
@@ -252,6 +253,7 @@
   <tr><td>TTFT</td><td>Time to first token in seconds; lower is better (see <a href="#speeds">Speeds</a>).</td></tr>
   <tr><td>tok/s</td><td>Output tokens per second; higher is better. A dash means no figure, including image and video generators, which stream no text tokens.</td></tr>
   <tr><td>Code, Intel</td><td>Artificial Analysis coding and intelligence indexes, as published by OpenRouter. Higher is better.</td></tr>
+  <tr><td>LB Code</td><td>The coding score from <a href="https://livebench.ai/">LiveBench</a>’s latest release, 0–100, higher is better. LiveBench is refreshed every few weeks, so it often has new models before Artificial Analysis. It uses a different scale from Code, so compare within one column. Only exact name matches are shown; hover a cell for every LiveBench category, and the details list them too. On a phone the card shows “LB code” when a model has a score.</td></tr>
   <tr><td>Rank</td><td>OpenRouter’s usage rank (see <a href="#ranks">Usage ranks</a>). A dash means the model is not in any category’s top 20.</td></tr>
   <tr><td>🔒</td><td>Privacy: 🔒 = ZDR + no training, ZDR = a zero-data-retention host only, blank = neither. On a page published without a key check, it shows ZDR or blank.</td></tr>
 </table></div>
