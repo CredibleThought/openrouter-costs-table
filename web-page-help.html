@@ -150,6 +150,7 @@
   <tr><td><code>reasoning</code></td><td>Reasoning / 1M</td><td>separate reasoning price per 1M tokens, USD</td></tr>
   <tr><td><code>cacheread</code></td><td>Cache read / 1M</td><td>cached input (cache hit) price per 1M tokens, USD</td></tr>
   <tr><td><code>cachewrite</code></td><td>Cache write / 1M</td><td>cache write price per 1M tokens, USD</td></tr>
+  <tr><td><code>age</code></td><td>Released</td><td>days since release, for example <code>age&lt;14</code></td></tr>
   <tr><td><code>ctx</code></td><td>Context</td><td>context window in tokens (<code>200k</code>, <code>1m</code>)</td></tr>
   <tr><td><code>ttft</code></td><td>TTFT</td><td>time to first token, seconds</td></tr>
   <tr><td><code>tps</code></td><td>tok/s</td><td>throughput, tokens per second</td></tr>
@@ -248,6 +249,7 @@
   <tr><td>Model</td><td>The name in bold, with the model ID to use in the OpenRouter API underneath. A leading <code>~</code> marks a “latest” alias that always points to the newest version, and <code>:batch</code>, <code>:free</code> and similar suffixes are variants with their own prices. Sorting by Model sorts by ID.</td></tr>
   <tr><td>Features</td><td>What the model accepts (<code>in</code>) and produces (<code>out</code>), in the same words as the <strong>Feature</strong> filter: for example <code>file, image (in), text</code> reads documents and images, <code>image (out)</code> makes images, <code>audio (out)</code> speaks, and <code>(in/out)</code> does both.</td></tr>
   <tr><td>Context</td><td>The context window in tokens (<code>1.0M</code> = one million).</td></tr>
+  <tr><td>Released</td><td>The release date: the day OpenRouter added the model, usually its release day. Hidden at first; turn it on with <strong>Columns ▾</strong>. Sorts newest first. The details show it too, for example “14 Oct 2026 (7 days ago)”.</td></tr>
   <tr><td>In / 1M, Out / 1M</td><td>Input and output prices per million tokens in US dollars.</td></tr>
   <tr><td>Task Cost</td><td>Estimated cost of one task for the selected profile (see <a href="#taskcost">Task cost</a>).</td></tr>
   <tr><td>TTFT</td><td>Time to first token in seconds; lower is better (see <a href="#speeds">Speeds</a>).</td></tr>
