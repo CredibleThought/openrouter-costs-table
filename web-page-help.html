@@ -156,6 +156,7 @@
   <tr><td><code>tps</code></td><td>tok/s</td><td>throughput, tokens per second</td></tr>
   <tr><td><code>coding</code></td><td>Code</td><td>Artificial Analysis coding index</td></tr>
   <tr><td><code>lbcode</code></td><td>LB Code</td><td>LiveBench coding score (0–100)</td></tr>
+  <tr><td><code>lbagentic</code></td><td>LB Agentic</td><td>LiveBench agentic score (0–100)</td></tr>
   <tr><td><code>intel</code></td><td>Intel</td><td>Artificial Analysis intelligence index</td></tr>
   <tr><td><code>agentic</code></td><td>—</td><td>Artificial Analysis agentic index</td></tr>
   <tr><td><code>zdr</code></td><td>🔒</td><td>number of zero-data-retention hosts (0 = none)</td></tr>
@@ -195,7 +196,7 @@
 <p>The usage rank and the Coding score measure different things, so they often disagree:</p>
 <ul>
   <li><strong>Usage rank</strong> counts how many tokens OpenRouter users send to a model: what people <em>use</em>.</li>
-  <li>The <strong>Code</strong> and <strong>Intel</strong> columns are Artificial Analysis test scores: how <em>well</em> a model does. <strong>LB Code</strong> is LiveBench’s coding score, which often covers new models first.</li>
+  <li>The <strong>Code</strong> and <strong>Intel</strong> columns are Artificial Analysis test scores: how <em>well</em> a model does. <strong>LB Code</strong> and <strong>LB Agentic</strong> are LiveBench’s coding and agentic scores, which often cover new models first. The best models score close together on LB Code; LB Agentic separates them better.</li>
 </ul>
 <p>For example, the Programming ranking is often led by fast, low-cost “Flash” models, while models with the highest Coding scores rank lower or not at all. The reasons:</p>
 <ul>
@@ -255,7 +256,8 @@
   <tr><td>TTFT</td><td>Time to first token in seconds; lower is better (see <a href="#speeds">Speeds</a>).</td></tr>
   <tr><td>tok/s</td><td>Output tokens per second; higher is better. A dash means no figure, including image and video generators, which stream no text tokens.</td></tr>
   <tr><td>Code, Intel</td><td>Artificial Analysis coding and intelligence indexes, as published by OpenRouter. Higher is better.</td></tr>
-  <tr><td>LB Code</td><td>The coding score from <a href="https://livebench.ai/">LiveBench</a>’s latest release, 0–100, higher is better. LiveBench is refreshed every few weeks, so it often has new models before Artificial Analysis. It uses a different scale from Code, so compare within one column. Only exact name matches are shown; hover a cell for every LiveBench category, and the details list them too. On a phone the card shows “LB code” when a model has a score.</td></tr>
+  <tr><td>LB Code</td><td>The coding score from <a href="https://livebench.ai/">LiveBench</a>’s latest release, 0–100, higher is better. LiveBench is refreshed every few weeks, so it often has new models before Artificial Analysis. It uses a different scale from Code, so compare within one column. Only exact name matches are shown; hover a cell for every LiveBench category, and the details list them too. The best models now pass almost every LiveBench coding task, so their scores sit close together.</td></tr>
+  <tr><td>LB Agentic</td><td>LiveBench’s agentic score from the same release, 0–100, higher is better: long-running work where early decisions have to hold up through later turns, such as taking over a working app through rounds of changing rules. It spreads the top models much more widely than LB Code. On a phone the card shows “LB agentic” when a model has a score; tap the card for every LiveBench category.</td></tr>
   <tr><td>Rank</td><td>OpenRouter’s usage rank (see <a href="#ranks">Usage ranks</a>). A dash means the model is not in any category’s top 20.</td></tr>
   <tr><td>🔒</td><td>Privacy: 🔒 = ZDR + no training, ZDR = a zero-data-retention host only, blank = neither. On a page published without a key check, it shows ZDR or blank.</td></tr>
 </table></div>
